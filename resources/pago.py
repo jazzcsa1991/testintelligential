@@ -72,7 +72,6 @@ class PagoResource(Resource):
             return errors, 422
         #revisa si exiten pagos posteriorer
         new_pagos = check_fecha(data['fecha'])
-        print(new_pagos)
         pago = Pago(
                 id_contrato=data['id_contrato'],
                 id_cliente=data['id_cliente'],
